@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+title: Real-World Local LLM Benchmarks
+message: >-
+  If you use these measurements or findings, please cite this repository.
+type: dataset
+authors:
+  - family-names: Pierri
+    given-names: Michele
+repository-code: "https://github.com/michele1967lux/real-world-local-llm-benchmarks"
+abstract: >-
+  Inference and coding-agent measurements for local LLMs on workstation
+  hardware (AMD Radeon AI PRO R9700 and NVIDIA RTX 3090 Ti), including
+  speculative decoding across backends, long-context behaviour, real agent
+  sessions, independent coding-task evaluations, a prefix-cache livelock
+  investigation, and a record of measurement errors made and retracted.
+keywords:
+  - llm
+  - benchmark
+  - speculative-decoding
+  - rocm
+  - cuda
+  - llama.cpp
+  - local-inference
+  - coding-agents
+license: CC-BY-4.0

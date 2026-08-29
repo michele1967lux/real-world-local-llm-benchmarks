@@ -1,0 +1,48 @@
+experiment: compaction-extraction-001
+date: 2026-08-28
+type: high_fidelity_port
+task_file: TASK.md
+source_upstream:
+  project: deepseek-harness
+  license: MIT
+  copyright: Copyright (c) 2026 DeepSeek
+
+candidates:
+  - id: qwen38
+    model: Qwen3.8-27B Q4_K_M
+    backend: lucebox
+    hardware: AMD Radeon AI PRO R9700
+    elapsed_hours_raw: 10.6
+    active_time: NOT_MEASURABLE
+    active_time_note: >
+      Raw elapsed includes dozens of backend restarts and idle waits not
+      attributable to the model. Operator estimate 5-6h, declared as an
+      estimate, not a measurement. See findings/methodology/.
+  - id: sonnet5
+    model: Claude Code (Sonnet 5)
+    backend: hosted
+    wall_clock_minutes: 30.6
+    wall_clock_source: agent transcript timestamps + framework duration_ms
+    tool_uses: 188
+    total_tokens: 361004
+
+judge:
+  independent: true
+  method: >
+    Reconstructed and executed the ORIGINAL subsystem against the same
+    external harness as both candidates, rather than reading the code.
+  scenarios: 22
+  original_passed: 22
+  qwen38_passed: 21
+  sonnet5_passed: 22
+  qwen38_score: 59
+  sonnet5_score: 87
+  qwen38_importable_as_shipped: false
+  qwen38_import_error: ERR_UNSUPPORTED_TYPESCRIPT_SYNTAX
+  qwen38_behavioral_divergences: 3
+  qwen38_plan_claims_not_in_code: 5
+
+publication:
+  source_publishable: true
+  reason: upstream is MIT; derived work retains MIT + DeepSeek copyright
+  repository: compaction-extraction-benchmark

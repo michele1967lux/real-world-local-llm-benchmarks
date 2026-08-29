@@ -1,0 +1,33 @@
+This repository contains two kinds of material under two licenses.
+
+DOCUMENTATION AND DATA
+    Everything under docs/, performance/, findings/, provenance/, raw/,
+    coding-agents/ (except code files), and all Markdown at the repository
+    root.
+
+    Licensed under Creative Commons Attribution 4.0 International
+    (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/
+
+    You may share and adapt this material for any purpose, including
+    commercially, provided you give appropriate credit.
+
+TOOLING CODE
+    Source files (.py, .sh) that are ours, including the judge's adversarial
+    test suite.
+
+    Licensed under the Apache License, Version 2.0:
+    http://www.apache.org/licenses/LICENSE-2.0
+
+THIRD-PARTY MATERIAL
+    Some artifacts in this repository are derived from, or reproduce, work by
+    others. They keep their original license and attribution, declared in the
+    file or directory that contains them. In particular:
+
+    - The compaction-extraction task and the candidate deliverables derive
+      from deepseek-harness, MIT licensed, Copyright (c) 2026 DeepSeek.
+    - Measurements and analyses reference Lucebox (Luce-Org/lucebox,
+      Apache-2.0) and llama.cpp (ggml-org/llama.cpp, MIT). No third-party
+      source code is vendored here.
+
+    Experimental artifacts are preserved verbatim and are not relicensed by
+    inclusion. See TRANSLATION_POLICY.md.

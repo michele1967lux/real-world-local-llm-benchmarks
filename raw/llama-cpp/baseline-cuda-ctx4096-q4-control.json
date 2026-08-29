@@ -1,0 +1,82 @@
+{
+  "backend": "cuda",
+  "label": "baseline-ctx4096-q4-control",
+  "model": "/media/lux-ai/OLLAMA-HF/.ollama/models/blobs/sha256-f5f1dd8920d417aac2718b0bda3403da274301efdd6760b4f0f4b864ff2ad57d",
+  "timestamp": "2026-08-28T13:25:49Z",
+  "n_predict": 256,
+  "n_runs": 5,
+  "n_warmup": 1,
+  "extra_args": [
+    "-ctk",
+    "q4_0",
+    "-ctv",
+    "q4_0"
+  ],
+  "runs": [
+    {
+      "run": 1,
+      "cache_n": 0,
+      "prompt_n": 95,
+      "prompt_ms": 196.873,
+      "prompt_per_token_ms": 2.0723473684210525,
+      "prompt_per_second": 482.5445845799069,
+      "predicted_n": 256,
+      "predicted_ms": 6219.402,
+      "predicted_per_token_ms": 24.389811764705883,
+      "predicted_per_second": 41.00072643640016
+    },
+    {
+      "run": 2,
+      "cache_n": 0,
+      "prompt_n": 95,
+      "prompt_ms": 201.19,
+      "prompt_per_token_ms": 2.1177894736842107,
+      "prompt_per_second": 472.1904667229982,
+      "predicted_n": 256,
+      "predicted_ms": 6826.768,
+      "predicted_per_token_ms": 26.771639215686275,
+      "predicted_per_second": 37.35296116698267
+    },
+    {
+      "run": 3,
+      "cache_n": 0,
+      "prompt_n": 95,
+      "prompt_ms": 205.719,
+      "prompt_per_token_ms": 2.1654631578947368,
+      "prompt_per_second": 461.7949727540966,
+      "predicted_n": 256,
+      "predicted_ms": 7559.575,
+      "predicted_per_token_ms": 29.645392156862744,
+      "predicted_per_second": 33.73205504277688
+    },
+    {
+      "run": 4,
+      "cache_n": 0,
+      "prompt_n": 95,
+      "prompt_ms": 208.128,
+      "prompt_per_token_ms": 2.190821052631579,
+      "prompt_per_second": 456.44987699877004,
+      "predicted_n": 256,
+      "predicted_ms": 8005.911,
+      "predicted_per_token_ms": 31.395729411764705,
+      "predicted_per_second": 31.851465748245268
+    },
+    {
+      "run": 5,
+      "cache_n": 0,
+      "prompt_n": 95,
+      "prompt_ms": 213.687,
+      "prompt_per_token_ms": 2.2493368421052633,
+      "prompt_per_second": 444.5754772166767,
+      "predicted_n": 256,
+      "predicted_ms": 8403.915,
+      "predicted_per_token_ms": 32.95652941176471,
+      "predicted_per_second": 30.343000851388904
+    }
+  ],
+  "mean_predicted_per_second": 34.85604184915878,
+  "median_predicted_per_second": 33.73205504277688,
+  "min_predicted_per_second": 30.343000851388904,
+  "max_predicted_per_second": 41.00072643640016,
+  "stddev_sample_predicted_per_second": 4.320014979460628
+}

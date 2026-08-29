@@ -1,0 +1,75 @@
+experiment: durable-job-queue-001
+date: 2026-08-29
+type: greenfield
+task_file: TASK.md
+
+model:
+  name: Qwen3.8-27B
+  quantization: Q4_K_M
+  drafter: Qwen3.8-27B-DFlash2 Q8_0
+
+backend:
+  name: lucebox
+  draft_block_size: 16
+  max_ctx: 131000
+  kv_cache: q8_0
+  prefix_cache_slots: 4
+  prefill_cache_slots: 2
+  patch: PR-665
+  binary_md5: 0faa4c6e817e2cb04a29ed73d8e36050
+
+hardware:
+  gpu: AMD Radeon AI PRO R9700
+  gfx: gfx1201
+  vram_gb: 32
+  rocm: 7.2.1
+  kernel: 6.17.0-40-generic
+
+agent:
+  harness: ds-harness
+  tools_exposed: 25
+
+execution:
+  turns: 87
+  turns_failed: 0
+  server_time_s: 1486
+  generated_tokens: 51575
+  mean_decode_tok_s: 48.8
+  dflash_acceptance_pct: 54.2
+  context_start_tokens: 11754
+  context_end_tokens: 75624
+  prefill_pct_wallclock: 26
+  decode_pct_wallclock: 71
+  decode_by_context_band_tok_s:
+    0-20k: 46.0
+    20-40k: 57.9
+    40-60k: 51.9
+    60-80k: 38.3
+
+deliverable:
+  production_lines: 1146
+  test_lines: 1212
+  doc_lines: 1045
+  runtime_dependencies: 0
+  commits: 6
+
+submission:
+  repository: qwen38-durable-job-queue-benchmark
+  branch: bench/qwen38-durable-job-queue
+  commit: 9c04073
+  tag: benchmark-submission-2026-08-29
+  frozen: true
+
+judge:
+  independent: true
+  candidate_tests: 53
+  candidate_tests_passed: 53
+  adversarial_tests: 17
+  adversarial_tests_passed: 17
+  adversarial_suite: test_adversarial.py
+  external_install_verified: true
+  cli_from_installed_package: true
+  fabricated_hashes: 0
+  verdict: PASS_WITH_DEFECTS
+  substantive_defects: 1
+  minor_defects: 2

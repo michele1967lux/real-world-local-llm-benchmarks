@@ -1,0 +1,76 @@
+{
+  "label": "dflash2-block16-vs-sibling-llamacpp",
+  "url": "http://127.0.0.1:8216",
+  "prompt_file": "/home/lux-ai/Video/lucebox-r9700-eval/bench/prompt.txt",
+  "n_gen": 256,
+  "n_runs": 5,
+  "n_warmup": 1,
+  "temperature": 0.0,
+  "timestamp": "2026-08-28T14:09:13Z",
+  "runs": [
+    {
+      "run": 1,
+      "response_id": "chatcmpl_0000000000000017",
+      "prompt_tokens": 106,
+      "completion_tokens": 256,
+      "accept_rate": 0.16326530277729034,
+      "wall_clock_s": 6.463551015000121,
+      "client_e2e_tok_per_s": 39.606711451011144,
+      "server_decode_tok_per_s": 40.7,
+      "server_decode_tok_per_s_log_crosscheck": null,
+      "server_e2e_tok_per_s_log": null
+    },
+    {
+      "run": 2,
+      "response_id": "chatcmpl_0000000000000018",
+      "prompt_tokens": 106,
+      "completion_tokens": 256,
+      "accept_rate": 0.16326530277729034,
+      "wall_clock_s": 6.472679272999812,
+      "client_e2e_tok_per_s": 39.55085509456347,
+      "server_decode_tok_per_s": 40.7,
+      "server_decode_tok_per_s_log_crosscheck": null,
+      "server_e2e_tok_per_s_log": null
+    },
+    {
+      "run": 3,
+      "response_id": "chatcmpl_0000000000000019",
+      "prompt_tokens": 106,
+      "completion_tokens": 256,
+      "accept_rate": 0.16326530277729034,
+      "wall_clock_s": 6.467912538002565,
+      "client_e2e_tok_per_s": 39.58000336211387,
+      "server_decode_tok_per_s": 40.8,
+      "server_decode_tok_per_s_log_crosscheck": null,
+      "server_e2e_tok_per_s_log": null
+    },
+    {
+      "run": 4,
+      "response_id": "chatcmpl_000000000000001a",
+      "prompt_tokens": 106,
+      "completion_tokens": 256,
+      "accept_rate": 0.16326530277729034,
+      "wall_clock_s": 6.473895144998096,
+      "client_e2e_tok_per_s": 39.543426988895924,
+      "server_decode_tok_per_s": 40.7,
+      "server_decode_tok_per_s_log_crosscheck": null,
+      "server_e2e_tok_per_s_log": null
+    },
+    {
+      "run": 5,
+      "response_id": "chatcmpl_000000000000001b",
+      "prompt_tokens": 106,
+      "completion_tokens": 256,
+      "accept_rate": 0.16326530277729034,
+      "wall_clock_s": 6.4707386790032615,
+      "client_e2e_tok_per_s": 39.562716514992026,
+      "server_decode_tok_per_s": 40.7,
+      "server_decode_tok_per_s_log_crosscheck": null,
+      "server_e2e_tok_per_s_log": null
+    }
+  ],
+  "summary": {
+    "mean_decode_tok_per_s": 40.720000000000006,
+    "n_samples": 5
+  }
+}

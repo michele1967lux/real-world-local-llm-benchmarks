@@ -1,0 +1,52 @@
+{
+  "label": "lucebox-ar-baseline-vs-sibling",
+  "url": "http://127.0.0.1:8216",
+  "prompt_file": "bench/prompt.txt",
+  "n_gen": 256,
+  "n_runs": 3,
+  "n_warmup": 1,
+  "temperature": 0.0,
+  "timestamp": "2026-08-28T14:12:38Z",
+  "runs": [
+    {
+      "run": 1,
+      "response_id": "chatcmpl_000000000000000c",
+      "prompt_tokens": 106,
+      "completion_tokens": 256,
+      "accept_rate": 0.0,
+      "wall_clock_s": 9.230449210997904,
+      "client_e2e_tok_per_s": 27.734294848291988,
+      "server_decode_tok_per_s": 28.3,
+      "server_decode_tok_per_s_log_crosscheck": null,
+      "server_e2e_tok_per_s_log": null
+    },
+    {
+      "run": 2,
+      "response_id": "chatcmpl_000000000000000d",
+      "prompt_tokens": 106,
+      "completion_tokens": 256,
+      "accept_rate": 0.0,
+      "wall_clock_s": 9.236320703999809,
+      "client_e2e_tok_per_s": 27.71666426536474,
+      "server_decode_tok_per_s": 28.3,
+      "server_decode_tok_per_s_log_crosscheck": null,
+      "server_e2e_tok_per_s_log": null
+    },
+    {
+      "run": 3,
+      "response_id": "chatcmpl_000000000000000e",
+      "prompt_tokens": 106,
+      "completion_tokens": 256,
+      "accept_rate": 0.0,
+      "wall_clock_s": 9.233155207999516,
+      "client_e2e_tok_per_s": 27.726166649749814,
+      "server_decode_tok_per_s": 28.3,
+      "server_decode_tok_per_s_log_crosscheck": null,
+      "server_e2e_tok_per_s_log": null
+    }
+  ],
+  "summary": {
+    "mean_decode_tok_per_s": 28.3,
+    "n_samples": 3
+  }
+}
