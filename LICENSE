@@ -1,8 +1,8 @@
 This repository contains two kinds of material under two licenses.
 
 DOCUMENTATION AND DATA
-    Everything under docs/, performance/, findings/, provenance/, raw/,
-    coding-agents/ (except code files), and all Markdown at the repository
+    Everything under performance/, findings/, provenance/, raw/, and
+    coding-agents/ (except code files), plus all Markdown at the repository
     root.
 
     Licensed under Creative Commons Attribution 4.0 International
@@ -23,8 +23,12 @@ THIRD-PARTY MATERIAL
     others. They keep their original license and attribution, declared in the
     file or directory that contains them. In particular:
 
-    - The compaction-extraction task and the candidate deliverables derive
-      from deepseek-harness, MIT licensed, Copyright (c) 2026 DeepSeek.
+    - The compaction-extraction task specification in coding-agents/ is an
+      experimental input preserved verbatim; the candidate deliverables it
+      produced are not in this repository, they live in
+      compaction-extraction-benchmark, where the upstream MIT license of
+      deepseek-harness (Copyright (c) 2026 DeepSeek) is reproduced in full
+      and governs them.
     - Measurements and analyses reference Lucebox (Luce-Org/lucebox,
       Apache-2.0) and llama.cpp (ggml-org/llama.cpp, MIT). No third-party
       source code is vendored here.
