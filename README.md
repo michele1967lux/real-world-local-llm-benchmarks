@@ -62,9 +62,11 @@ Greenfield build of a durable job queue: **PASS**, surviving 53/53 of its own
 tests and 17/17 independent adversarial tests. In both cases the main defect is
 in what it documents, not in the code.
 
-**Leaving the server idle costs ~70 W.** A known, open ROCm bug on this
-hardware: after serving at least one request the clocks stay pinned and the
-GPU never drops to idle until the process exits.
+**Leaving the server idle costs ~70 W.** A known ROCm issue on this hardware:
+after serving at least one request the clocks stay pinned and the GPU never
+drops to idle until the process exits. The upstream issues are closed as
+completed, yet another user reported it persisting on ROCm 7.2.1 after
+closure — and we observe it on 7.2.1.
 
 ---
 
@@ -110,9 +112,9 @@ avoid mixing research, evidence, and third-party software:
 
 | Repository | Contents |
 |---|---|
-| `qwen38-durable-job-queue-benchmark` | the judged source with its Git history, immutable tag on the evaluated commit |
-| `compaction-extraction-benchmark` | both candidates from the first benchmark (derived from `deepseek-harness`, MIT) |
-| fork of `Luce-Org/lucebox` | the branches used for the PR #665 validation |
+| [qwen38-durable-job-queue-benchmark](https://github.com/michele1967lux/qwen38-durable-job-queue-benchmark) | the judged source with its Git history, immutable tag on the evaluated commit |
+| [compaction-extraction-benchmark](https://github.com/michele1967lux/compaction-extraction-benchmark) | both candidates from the first benchmark (derived from `deepseek-harness`, MIT) |
+| [fork of `Luce-Org/lucebox`](https://github.com/michele1967lux/lucebox/blob/main/FORK-NOTES.md) | the branches used for the PR #665 validation |
 
 ## Language
 

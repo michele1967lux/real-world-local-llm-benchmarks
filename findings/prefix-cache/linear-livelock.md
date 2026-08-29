@@ -193,10 +193,10 @@ that, by construction, could not reveal an abort. See
 
 ## 7. Side discovery: the R9700 idling at ~95 W
 
-The investigation surfaced a known, open ROCm bug documented on this exact
-hardware: [ROCm#5706](https://github.com/ROCm/ROCm/issues/5706)
+The investigation surfaced a known ROCm issue documented on this exact
+hardware: [legacy-rocm-build#5706](https://github.com/ROCm/legacy-rocm-build/issues/5706)
 (R9700/gfx1201, llama.cpp HIP backend) and
-[ROCm#6298](https://github.com/ROCm/ROCm/issues/6298) (same GPU with PyTorch).
+[legacy-rocm-build#6298](https://github.com/ROCm/legacy-rocm-build/issues/6298) (same GPU with PyTorch).
 
 Details and the four measured states in
 [`performance/hardware/rocm-idle-power-gfx1201.md`](../../performance/hardware/rocm-idle-power-gfx1201.md).

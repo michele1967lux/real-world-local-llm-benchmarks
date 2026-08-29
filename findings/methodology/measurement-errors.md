@@ -156,7 +156,8 @@ while the profile was still `POWER_SAVING`. The data had been collected and
 simply not compared.
 
 **What falsified it.** Comparing the two readings, then a literature check: it
-is a known, open ROCm bug on this hardware.
+is a known ROCm issue on this hardware, closed upstream as completed but
+still reproducing on our version.
 
 **Correct conclusion.** The profile is irrelevant. A HIP runtime bug prevents
 the GPU from dropping to idle after it has served work.

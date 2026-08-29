@@ -180,8 +180,9 @@ Task specs, judge reports and details in [`coding-agents/`](../coding-agents/).
 | server under load | 291 W | 110 °C |
 
 About **70 W** between a stopped server and one idling after use — roughly
-1.7 kWh/day if left running for nothing. This is a known, open ROCm bug on
-this hardware, not a misconfiguration.
+1.7 kWh/day if left running for nothing. This is a known ROCm issue on this
+hardware, not a misconfiguration — closed upstream as completed, but still
+reproducing on ROCm 7.2.1.
 
 Details in
 [`performance/hardware/rocm-idle-power-gfx1201.md`](hardware/rocm-idle-power-gfx1201.md).

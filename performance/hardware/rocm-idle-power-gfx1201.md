@@ -1,9 +1,30 @@
-## Same on gfx1201 with ROCm 7.2.1 — plus one detail: it takes real work to trigger
+# R9700 idle power — ~70 W burned doing nothing
+
+## Upstream status
+
+Two issues describe this on exactly this hardware. Both were **transferred** to
+`ROCm/legacy-rocm-build` and both are **closed as completed**:
+
+| | opened | closed | comments |
+|---|---|---|---|
+| [legacy-rocm-build#5706](https://github.com/ROCm/legacy-rocm-build/issues/5706) — HIP backend in llama.cpp keeps RDNA4 (gfx1201 / R9700) at 100% after idle | 2025-11-27 | 2026-03-18 | 36 |
+| [legacy-rocm-build#6298](https://github.com/ROCm/legacy-rocm-build/issues/6298) — PyTorch ROCm resident process keeps R9700/gfx1201 at 100% idle until process exit | 2026-05-25 | 2026-06-25 | 6 |
+
+**Closed does not mean fixed here.** After the closure of #5706, a user
+reported (2026-04-02) still seeing 100% GPU usage on **ROCm 7.2.1** — our exact
+version — on a 6.17 kernel. Our measurements below are on ROCm 7.2.1 and are
+consistent with that report.
+
+We have not filed anything upstream: the issues are closed, and re-opening
+someone else's thread to add one more data point is not obviously useful. The
+measurements are published here instead.
+
+## What we measured
 
 Reproduced on a single R9700 with a llama.cpp-derived HIP server (Lucebox
-`dflash_server`). Adding it because the setup differs from the report (one GPU
-instead of three, newer ROCm) and because the trigger condition turned out to
-be narrower than "process is running".
+`dflash_server`). Worth recording because the setup differs from the original
+report (one GPU instead of three, newer ROCm) and because the trigger condition
+turned out to be narrower than "process is running".
 
 **Setup:** AMD Radeon AI PRO R9700 (gfx1201), amdgpu 6.16.13, ROCm 7.2.1,
 kernel 6.17.0-40, Ubuntu 24.04.4. Server holds 6 resident HSA queues and one fd
